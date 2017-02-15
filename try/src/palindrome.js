@@ -2,6 +2,9 @@ class Palindrome {
 
 
     check(str) {
+        if (str == undefined) {
+            throw 'Argument expected';
+        }
         let cleanStr = str.split("").filter(isNotWhitespace).join("");
         if (cleanStr === '') {
             return false;

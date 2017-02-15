@@ -26,6 +26,10 @@ describe('basic palindrome without punctiation', function() {
         expect(isPalindrome('abc')).to.not.be.true;
     });
 
+    it('expects an argument', function () {
+        expect(() => palindrome.check()).to.throw('Argument expected')
+    });
+
     function isPalindrome(phrase) {
         return palindrome.check(phrase);
     }
